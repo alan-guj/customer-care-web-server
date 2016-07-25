@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="http://common-cdn.jyx365.top/lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <link href="static/css/customer_list.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/add_customer.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/modify_customer_info.css" rel="stylesheet" type="text/css" />
+	<link href="static/css/add_schedule_item.css" rel="stylesheet" type="text/css" />
+    
+
+    <script src="http://common-cdn.jyx365.top/js/jquery-1.11.2.min.js"></script>
+    <!-- ionic/angularjs js -->
+    <script src="http://common-cdn.jyx365.top/lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="http://common-cdn.jyx365.top/js/angular-locale_zh-cn.js"></script>
+    <script src="http://common-cdn.jyx365.top/js/angular-popups.js"></script>
+    <script src="http://common-cdn.jyx365.top/lib/ionic/js/angular/angular-resource.min.js"></script>
+    <script src="http://common-cdn.jyx365.top/js/ionic-datepicker.bundle.min.js"></script>
+    <script src="http://common-cdn.jyx365.top/js/ionic-citypicker.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    
+
+    <!-- your app's js -->
+    <script type="text/javascript">
+{% autoescape false %}
+angular.module("configure",[])
+.constant("web_servers",{{web_servers}})
+.constant("services",{{services}})
+.constant("sys_params",{{sys_params}});
+
+{% endautoescape %}
+    </script>
+    <script src="static/js/util.js"></script>
+    <script src="static/js/app.js"></script>
+    <script src="static/js/services.js"></script>
+    <script src="static/js/directive.js"></script>
+    <script src="static/js/filter.js"></script>
+    <script src="static/js/jssdk_service.js"></script>
+    <script src="static/js/CustomerService.js"></script>
+
+    <script src="static/js/echarts.js"></script>
+    <script src="static/js/echarts_for_care.js"></script>
+    <script src="static/js/personal_homepage_ctrl.js"></script>
+    <script src="/static/js/group_homepage_ctrl.js"></script>
+    <script src="static/js/customer_info_service.js"></script>
+    <script src="static/js/select_hospital_service.js"></script>
+    <script src="static/js/select_enpuser_service.js"></script>
+    <script src="static/js/focus_people_setting.js"></script>
+    <script src="static/js/care_period_setting_ctrl.js"></script>
+    <script src="static/js/customer_list_ctrl.js"></script>
+	<script src="static/js/focus_people_setting.js"></script>
+    <script src="static/js/schedule_list_ctrl.js"></script>
+    <script src="static/js/schedule_item_service.js"></script>
+    <script src="static/js/select_customer_service.js"></script>
+    <script src="static/js/schedule_item_detail_ctrl.js"></script>
+    <script src="static/js/add_schedule_item_ctrl.js"></script>
+    <script src="static/js/customer_detail_ctrl.js"></script>
+    <script src="static/js/customer_refer_ctrl.js"></script>
+    
+    <script src="static/js/select_customer_service.js"></script>
+    <script src="static/js/add_worklog_ctrl.js"></script>
+    <script src="static/js/scheduleService.js"></script>
+    <script src="static/js/CustomerService.js"></script>
+	<!-- <script src="static/js/add_location_ctrl.js"></script>
+    <script src="static/js/map_location_ctrl.js"></script> -->
+
+	<script src="static/js/map_location_service.js"></script>
+	<!-- <script src="static/js/modify_customer_ctrl.js"></script> -->
+      <script src="static/js/care_period_setting_ctrl.js"></script>
+      
+	<script src="static/js/care_period_service.js"></script>
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=Q5VBZ-64BKP-SRKDA-LSJYZ-RXCEE-3RBJ6"></script>
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=Q5VBZ-64BKP-SRKDA-LSJYZ-RXCEE-3RBJ6&libraries=drawing,geometry,autocomplete,convertor"></script>
+
+    <script type="text/javascript">
+app.constant("token","{{token|safe}}");
+app.constant("current_user",{data:{{current_user.data|tojson|safe}},enpinfo:{{current_user.enpinfo|tojson|safe}}});
+    </script>
+  </head>
+  <body ng-app="customer_care_web_server">
+      <!--<audio id="player" src="static/voice/2.mp3" type="audio/mpeg"></audio>-->
+      <ion-nav-view></ion-nav-view>
+  </body>
+</html>

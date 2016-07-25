@@ -1,0 +1,23 @@
+
+WTF_CSRF_ENABLED = True
+SECRET_KEY = 'you-will-never-guess-111111111'
+#设置服务的Cookie名称，XSYX-99
+SESSION_COOKIE_NAME = 'customer_care_web_server'
+SEND_FILE_MAX_AGE_DEFAULT = 1
+
+
+WX_WEB_SERVICE = {
+        'consumer_key':'',
+        'consumer_secret':'',
+        'base_url':'http://dev.jyx365.top',
+        'access_token_url':'/oauth/access_token',
+        'authorize_url':'/oauth/authorize',
+        'request_token_params':{'scope': 'userinfo'},
+        'access_token_method':'GET'
+        }
+
+#工作环境(dev/test/prod)
+WORK_ENV = "dev"
+CUSTOMER_CARE_SERVICE_NAME  = "customer-care-service"
+MY_SERVICE_REGISTER = True
+MY_SERVICE = "http://cc-dev.jyx365.top:80"

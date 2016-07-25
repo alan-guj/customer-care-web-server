@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+  </head>
+  <body>
+  </body>
+    <script type="text/javascript">
+window.onload = function(){
+    window.sessionStorage.web_servers=JSON.stringify({{web_servers|tojson|safe}});
+    window.sessionStorage.services=JSON.stringify({{services|tojson|safe}});
+    window.sessionStorage.sys_params=JSON.stringify({{sys_params|tojson|safe}});
+    window.sessionStorage.token=JSON.stringify({{token|tojson|safe}});
+    window.sessionStorage.current_user = JSON.stringify({data:{{current_user.data|tojson|safe}},enpinfo:{{current_user.enpinfo|tojson|safe}}});
+    window.location="/{{mode}}/index.html";
+}
+    </script>
+</html>

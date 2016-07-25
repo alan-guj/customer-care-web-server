@@ -1,0 +1,13 @@
+wx_web_server部署过程
+1，从SVN上checkout代码
+2，安装Python运行环境（可选）
+sudo yum install python34
+sudo yum install python34-devel
+sudo yum install zlib-devel
+sudo yum install libjpeg-turbo-devel
+3，建立python虚拟运行环境
+virtualenv -p /usr/bin/python3 flask
+或者 
+virtualenv -p /usr/bin/python3.4 flask
+4，安装所需要的python库
+./flask/bin/pip install -r requirements.txt --trusted-host mirrors.aliyun.com -i http://mirrors.aliyun.com/pypi/simple
