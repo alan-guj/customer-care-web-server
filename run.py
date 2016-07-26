@@ -1,4 +1,4 @@
-#!flask/bin/python
+#!flask/Scripts/python
 from apps import app
 from apps.services_init import services_resources_init
 

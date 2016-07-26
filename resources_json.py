@@ -21,6 +21,15 @@ customer_care_service_api_list = {
         'myGrpLocation_show_uri':'/api/v1.0/group/:grp_id/logs?type=location&date=:date&range=:range'
 }
 
+oauth_params = {
+    'baseUrl': 'https://dev.jyx365.top',
+    'clientId': 'customer_care_web_server_guj',
+    'clientSecret': '654322',
+    'grantPath': '/oauth/access_token',
+    'revokePath': '/oauth/revoke',
+    'userPath': '/api/v1.0/users/current'
+}
+
 sys_params = {
         'range_max':{
             'five_max':100,

@@ -14,6 +14,7 @@ window.onload = function(){
     window.sessionStorage.sys_params=JSON.stringify({{sys_params|tojson|safe}});
     window.sessionStorage.token=JSON.stringify({{token|tojson|safe}});
     window.sessionStorage.current_user = JSON.stringify({data:{{current_user.data|tojson|safe}},enpinfo:{{current_user.enpinfo|tojson|safe}}});
+    window.sessionStorage.oauth_params = JSON.stringify({{oauth_params|tojson|safe}});
     window.location="/{{mode}}/index.html";
 }
     </script>

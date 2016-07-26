@@ -122,6 +122,7 @@ def customer_care_app(mode):
             web_servers = web_servers,
             services = services,
             sys_params = sys_params,
+            oauth_params = oauth_params,
             mode=mode)
 
 
