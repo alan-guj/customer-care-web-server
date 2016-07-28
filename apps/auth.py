@@ -100,22 +100,22 @@ def authorized():
         return redirect(REGISTRATION_URI % (user['id'],next))
     if next is not None:
         return redirect(next)
-    return redirect(url_for('customer_care'))
+    return redirect(url_for('customer_care_app'))
+
+# @app.route('/customer_care')
+# @login_required
+# def customer_care():
+    # return render_template(
+            # 'customer_care.html',
+            # token=session['access_token'][0],
+            # web_servers = web_servers,
+            # services = services,
+            # sys_params = sys_params)
+
 
 @app.route('/customer_care')
 @login_required
-def customer_care():
-    return render_template(
-            'customer_care.html',
-            token=session['access_token'][0],
-            web_servers = web_servers,
-            services = services,
-            sys_params = sys_params)
-
-
-@app.route('/customer_care/<mode>')
-@login_required
-def customer_care_app(mode):
+def customer_care_app(mode='prod'):
     return render_template(
             'customer_care_app.html',
             token=session['token'],

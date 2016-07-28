@@ -8,7 +8,7 @@ from config import WORK_ENV
 # from flask.ext.cors import CORS
 os.environ['OAUTHLIB_INSECURE_TRANSPORT']='1'
 
-app = Flask(__name__,static_folder='dev')
+app = Flask(__name__,static_folder='prod')
 lm = LoginManager()
 lm.init_app(app)
 lm.login_view = 'login'

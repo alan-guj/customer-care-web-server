@@ -4,7 +4,7 @@ web_servers = {
 
 other_services = {
         'hospital_uri':'http://120.27.157.28:7007/api/v1.0/hospital/list',
-        'jssdk_signature':'http://114.55.3.224:5000/api/v1.0/weixin/jssdk/signature?pageurl=http://cc-dev.jyx365.top/customer_care',
+        'jssdk_signature':'http://114.55.3.224:5000/api/v1.0/weixin/jssdk/signature?pageurl=http://cc-dev.jyx365.top/prod/index.html',
         'jssdk_location':'http://apis.map.qq.com/tools/poimarker?type=0&marker=:marker&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&referer=myapp&streetview=0&tonav=0',
         'enporguser_uri':'http://114.55.3.224:6001/api/v1/enporguser/enpe/:orgid'
 }

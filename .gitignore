@@ -4,3 +4,4 @@ config.py
 nohup.out
 *flask*
 /apps/dev
+/apps/prod
